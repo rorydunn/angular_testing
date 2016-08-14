@@ -1,0 +1,12 @@
+<div class="main" ng-controller="HttpGetController">
+  <ul class="movielist">
+    <h4>List of Movies</h4>
+    <label>Search: <input ng-model="search.title"></label>
+    <li class="movie" ng-repeat="item in movies | filter:search:strict">
+      <h2>Movie: {{item.title}}</h2>
+      <h4>Year: {{item.releaseYear}}</h4>
+      <h4>Director: {{item.director}}</h4>
+      <h4>Genre: {{item.genre}}</h4>
+    </li>
+  </ul>
+</div>
